@@ -1,3 +1,5 @@
+using Domain.Common;
+using Domain.News_Related;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +20,15 @@ namespace Domain.Sports_Related
         public string? ContinentId { get; set; }
         public Continent? Continent { get; set; }
 
-        public List<Match>? Matches { get; set; } = new List<Match>();
-        public List<Team>? CurrentTeams { get; set; } = new List<Team>();
-        public List<RankingTable>? RankingTable { get; set; } = new List<RankingTable>();
+        public List<Match>? Matches { get; set; } = [];
+        public List<Team>? CurrentTeams { get; set; } = [];
+        public List<RankingTable>? RankingTable { get; set; } = [];
 
-        public List<Stat>? Stats { get; set; } = new List<Stat>();
+        public List<Stat>? Stats { get; set; } = [];
 
         public byte[]? Logo { get; set; }
-        public League()
+        public League():base()
         {
-            super();
         }
         
     }

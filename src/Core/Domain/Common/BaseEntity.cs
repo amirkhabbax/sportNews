@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Domain.Common
 {
     public abstract class BaseEntity
@@ -19,7 +14,7 @@ namespace Domain.Common
         {
             Id =  Guid.NewGuid().ToString("N");
 
-            Timestamp = DateTime.Now;
+            Timestamp = 1;
         }
     }
 }

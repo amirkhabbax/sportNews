@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
+using Domain.Enumerations;
+using Domain.News_Related;
 
 namespace Domain.Sports_Related
 {
@@ -25,11 +24,10 @@ namespace Domain.Sports_Related
 
         public string? HonorsList{ get; set; }
 
-        public List<Team>? TeamsPlayed   { get; set; }  = new List<Team>();
+        public List<Team>? TeamsPlayed   { get; set; } = [];
 
-        public Player()
+        public Player():base()
         {
-            super();
         }
         
     }

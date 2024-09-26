@@ -1,22 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
 
 namespace Domain.WebSite_Features
 {
     public class ChatUserGroup : BaseEntity
     {
-        public List<User>? Members { get; set; } = new List<User>();
-        public List<User>? Administrators { get; set; } = new List<User>();
-        public List<User>? CanWriteUsers { get; set; } = new List<User>();
-        public List<User>? PendingRequests { get; set; } = new List<User>();
-        public List<User>? BlockedUsers { get; set; } = new List<User>();
+        public List<User>? Members { get; set; } = [];
+        public List<User>? Administrators { get; set; } = [];
+        public List<User>? CanWriteUsers { get; set; } = [];
+        public List<User>? PendingRequests { get; set; } = [];
+        public List<User>? BlockedUsers { get; set; } = [];
 
         public byte[]? ProfilePic { get; set; }
 
         public string? BioText { get; set; }
-        
+
         public string ChatId { get; set; }
         public Chat Chat { get; set; }
 
@@ -24,13 +21,15 @@ namespace Domain.WebSite_Features
         public bool IsChannel { get; set; } = false;
         public bool IsPrivate { get; set; } = false;
 
-        public string? CreatorUserId {get; set;}
-        public User? CreatorUser {get; set;}
+        public string? CreatorUserId { get; set; }
+        public User? CreatorUser { get; set; }
 
-        public DateTime DateTimeCreated {get; set;}
-        public ChatUserGroup()
+        public bool IsBanned { get; set; } = false;
+
+        public DateTime DateTimeCreated { get; set; }
+
+        public ChatUserGroup() : base()
         {
-            super();
         }
     }
 }

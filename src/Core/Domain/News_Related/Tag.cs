@@ -1,14 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
 
 namespace Domain.News_Related
 {
     public class Tag : BaseEntity
     {
-        public string? RelatedTagId { get; set; }
+        public Tag():base()
+        {
+        }
 
-        public Tag? RelatedTag { get; set; }
+        public List<Tag> RelatedTags { get; set; } = [];
     }
 }

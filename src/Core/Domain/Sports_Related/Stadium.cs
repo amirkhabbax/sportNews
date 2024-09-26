@@ -1,3 +1,5 @@
+using Domain.Common;
+using Domain.News_Related;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +21,8 @@ namespace Domain.Sports_Related
         public short Capacity { get; set; }
 
         public byte[]? Picture   { get; set; }
-        public Stadium()
+        public Stadium():base()
         {
-            super();
         }
     }
 }

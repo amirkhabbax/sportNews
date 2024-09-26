@@ -1,18 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
+using Domain.News_Related;
 
 namespace Domain.Sports_Related
 {
     public class Team : BaseEntity
     {
 
-        public List<League>? ParticipatingLeagues { get; set;}  = new List<League>();
+        public List<League>? ParticipatingLeagues { get; set;}  = [];
 
-        public List<Player>? Squad { get; set;}  = new List<Player>();
+        public List<Player>? Squad { get; set;}  = [];
 
-        public List<Team>? Rivals { get; set;}  = new List<Team>();
+        public List<Team>? Rivals { get; set;}  = [];
 
         public string? CurrentManagerId { get; set; }
         public Manager? CurrentManager { get; set; }
@@ -29,9 +27,8 @@ namespace Domain.Sports_Related
         public byte[]? Logo { get; set; }
         public string? HonorsList { get; set; }
         public string? NickNames { get; set; }
-        public Team()
+        public Team():base()
         {
-            super();
         }
     }
 }

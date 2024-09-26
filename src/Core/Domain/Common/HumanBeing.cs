@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Enumerations;
+using Domain.News_Related;
+using Domain.Sports_Related;
 
 namespace Domain.Common
 {
@@ -15,7 +14,7 @@ namespace Domain.Common
 
         public EGender Gender{ get; set; } = EGender.Other;
 
-        public Date? BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
 
         public string? TagId { get; set; }
         public Tag? Tag { get; set; }
@@ -25,9 +24,8 @@ namespace Domain.Common
 
         public byte[]? Picture { get; set; }
 
-        public HumanBeing()
+        public HumanBeing():base()
         {
-            super();
         }
     }
 }

@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
+using Domain.Enumerations;
 
 namespace Domain.Sports_Related
 {
     public class RankingTable : BaseEntity
     {
 
-        public string LeaugeId { get; set; }
-        public Leauge Leauge { get; set; }
+        public string LeagueId { get; set; }
+        public League League { get; set; }
 
         public ESeason Season { get; set; }
 
@@ -32,9 +30,9 @@ namespace Domain.Sports_Related
         public short Points { get; set; }
 
         public ETableType TableType{ get; set; } = ETableType.None;
-        public RankingTable()
+
+        public RankingTable():base()
         {
-            super();
         }
         
     }

@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
 
 namespace Domain.News_Related
 {
     public class StatType : BaseEntity
     {
-        public StatType()
+        public StatType():base()
         {
-            super();
         }
     }
 }

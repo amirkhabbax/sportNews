@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
+using Domain.Enumerations;
+using Domain.News_Related;
 
 namespace Domain.Sports_Related
 {
@@ -15,9 +14,8 @@ namespace Domain.Sports_Related
 
         public ERefreeType RefreeType   { get; set; } = ERefreeType.None;
         
-        public Refree()
+        public Refree():base()
         {
-            super();
         }
     }
 }

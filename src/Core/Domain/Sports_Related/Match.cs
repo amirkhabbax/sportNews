@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
+using Domain.Enumerations;
+using Domain.News_Related;
 
 namespace Domain.Sports_Related
 {
@@ -11,11 +10,11 @@ namespace Domain.Sports_Related
 
         public string HostTeamId { get; set; }
         public Team HostTeam { get; set; }
-        public short HostTeamScore { get; set; } = 0,
+        public short HostTeamScore { get; set; } = 0;
 
         public string GuestTeamId { get; set; }
         public Team GuestTeam { get; set; }
-        public short GuestTeamScore { get; set; } = 0,
+        public short GuestTeamScore { get; set; } = 0;
 
         public string LeagueId { get; set; }    
         public League League    { get; set; }
@@ -35,9 +34,8 @@ namespace Domain.Sports_Related
         public List<Refree>? AssistantRefrees { get; set; } = new List<Refree>();
         public List<Refree>? VideoAssistantRefrees { get; set; } = new List<Refree>();
 
-        public Match()
+        public Match():base()
         {
-            super();
         }
     }
 }

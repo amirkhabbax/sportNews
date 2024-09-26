@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
+using Domain.Sports_Related;
 
 namespace Domain.News_Related
 {
@@ -13,11 +11,10 @@ namespace Domain.News_Related
         public string? TeamId  { get; set; }
         public Team? Team { get; set; }
 
-        public List<Stat> Stats { get; set; } = new List<Stat>();
+        public List<Stat> Stats { get; set; } = [];
 
-        public History()
+        public History():base()
         {
-            super();
         }
     }
 }

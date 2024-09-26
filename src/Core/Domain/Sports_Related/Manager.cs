@@ -1,3 +1,5 @@
+using Domain.Common;
+using Domain.News_Related;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +18,8 @@ namespace Domain.Sports_Related
         public string? HonorsList   { get; set; }
 
         public List<Team>? TeamsManged   { get; set; }  = new List<Team>();
-        public Manager()
+        public Manager():base()
         {
-            super();
         }
     }
 }

@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
+using Domain.Enumerations;
+using Domain.Sports_Related;
 
 namespace Domain.News_Related
 {
@@ -22,9 +21,8 @@ namespace Domain.News_Related
 
         public StatType StatType{ get; set; }
 
-        public Stat()
+        public Stat():base()
         {
-            super();
         }
     }
 }

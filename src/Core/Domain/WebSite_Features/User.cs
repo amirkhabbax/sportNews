@@ -1,14 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Common;
+using Domain.Enumerations;
+using Domain.Sports_Related;
 
 namespace Domain.WebSite_Features
 {
     public class User : HumanBeing
     {
-        public Date CreateDate  { get; set; }
-        public Date LastDateChangedPassword  { get; set; }
+        public DateTime CreateDate  { get; set; }
+        public DateTime LastDateChangedPassword  { get; set; }
 
         private string _userName;
         public string UserName { get { return _userName; } set { this._userName = value; } }
@@ -18,21 +17,24 @@ namespace Domain.WebSite_Features
 
         public string? BioText { get; set;}
 
-        public List<Team>? FavoriteTeams { get; set; } = new List<Team>();
-        public List<League>? FavoriteLeagues { get; set; } = new List<League>();
+        public List<Team>? FavoriteTeams { get; set; } = [];
+        public List<League>? FavoriteLeagues { get; set; } = [];
 
-        public List<User>? Friends { get; set; } = new List<User>();
-        public List<User>? BlockedUsers { get; set; } = new List<User>();
+        public List<Post>? FavoritePosts { get; set; } = [];
+
+        public List<User>? Friends { get; set; } = [];
+        public List<User>? PendingFriendRequests { get; set; } =[];
+
+        public List<User>? BlockedUsers { get; set; } = [];
 
         public EUserType UserType { get; set; } = EUserType.None;
         
-        public User(EUserType userType , Date createDate)
+        public User(EUserType userType , DateTime createDate):base()
         {   
             CreateDate = createDate;
             LastDateChangedPassword = createDate;
 
             UserType = userType; 
-            super();
         }
     }
 }
